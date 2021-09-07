@@ -27,6 +27,12 @@ namespace WpfApp8.pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            
+            if ((Фамилия.Text.Length < 4) && (Имя.Text.Length < 4) && (Отчество.Text.Length < 4) && (Рождение.Text.Length < 4) && (Номер.Text.Length < 4) && (Пароль.Text.Length < 4))
+            {
+                MessageBox.Show("Не введены данные");
+                return;
+            }
             NavigationService.Navigate(Class1.PageLogin);
         }
 
